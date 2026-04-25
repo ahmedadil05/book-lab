@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>My Book Library</h1>
+        <p>Search books online and save them to your Read List or Favorites.</p>
+      </header>
+
+      <section class="search-panel">
+        <form id="search-form">
+          <label for="search-input" class="sr-only">Search books</label>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search by title, author, or keyword"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Search Results</h2>
+        <p id="status" role="status" aria-live="polite"></p>
+        <div id="results" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Read List</h2>
+        <div id="read-list" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Favorites</h2>
+        <div id="favorites" class="grid"></div>
+      </section>
+    </main>
+
+    <template id="book-card-template">
+      <article class="book-card">
+        <img class="cover" alt="Book cover" />
+        <div class="book-info">
+          <h3 class="title"></h3>
+          <p class="author"></p>
+          <p class="year"></p>
+          <div class="actions"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
